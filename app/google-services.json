@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "652943164048",
+    "firebase_url": "https://recorder-6a4e7-default-rtdb.firebaseio.com",
+    "project_id": "recorder-6a4e7",
+    "storage_bucket": "recorder-6a4e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652943164048:android:c80142fc09659b8e158e15",
+        "android_client_info": {
+          "package_name": "com.example.rec"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJWEiudh3RTg9zaUOCS8ju2L42p0HVhVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652943164048:android:6d10544e5fdfc330158e15",
+        "android_client_info": {
+          "package_name": "com.example.recorder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJWEiudh3RTg9zaUOCS8ju2L42p0HVhVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Tambahkan ScrollView di sini -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">  <!-- Memastikan ScrollView mengisi viewport -->
+
+        <!-- Layout Utama untuk Account -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pengaturan_akun"
+                android:theme="@style/Theme.Recorder"
+                android:textColor="@color/black"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="center" />
+
+            <!-- Ikon Pengguna di bawah teks "Akun" -->
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_user_icon"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/textViewWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/memuat_pengguna"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_dark_red"
+                android:padding="10dp"
+                android:layout_marginTop="13dp">
+
+                <Button
+                    android:id="@+id/buttonDeleteAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hapus_akun"
+                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="34dp"
+                    android:drawableLeft="@drawable/ic_delete"
+                    android:drawablePadding="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_blue_purple"
+                android:padding="10dp"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/buttonLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keluar"
+                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="34dp"
+                    android:drawableLeft="@drawable/ic_logout"
+                    android:drawablePadding="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_green_teal"
+                android:padding="10dp"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/buttonBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kembali"
+                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="34dp"
+                    android:drawableLeft="@drawable/ic_back"
+                    android:drawablePadding="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- ProgressBar di tengah layar -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/backgroundColor">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:background="@color/cardBackgroundColor"
+        android:clipToPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Judul -->
+            <TextView
+                android:id="@+id/textViewDetailNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_catatan"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Gambar -->
+            <ImageView
+                android:id="@+id/imageViewNote"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Note Image"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/image_background"
+                android:elevation="6dp"
+                android:clipToOutline="true" />
+
+            <!-- Deskripsi -->
+            <TextView
+                android:id="@+id/textViewNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is a sample note description."
+                android:textSize="16sp"
+                android:textColor="@color/bodyTextColor"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginBottom="12dp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Penulis -->
+            <TextView
+                android:id="@+id/authorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penulis"
+                android:textSize="14sp"
+                android:textColor="@color/subTextColor"
+                android:layout_marginBottom="4dp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Tanggal -->
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:textSize="14sp"
+                android:textColor="@color/subTextColor"
+                android:layout_marginBottom="16dp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Tombol -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient_blue_purple"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@android:color/transparent"
+                    android:elevation="4dp"
+                    android:text="Kembali"
+                    android:gravity="center"
+                    android:textColor="@color/buttonTextColor"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:fillViewport="true">-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="16dp"-->
+<!--        app:cardCornerRadius="18dp"-->
+<!--        app:cardElevation="8dp"-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="20dp">-->
+
+<!--            &lt;!&ndash; Judul "Detail Note" &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/textViewDetailNote"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Detail Note"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textStyle="bold"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="20dp" />-->
+
+<!--            &lt;!&ndash; Gambar Catatan &ndash;&gt;-->
+
+
+<!--            &lt;!&ndash; Teks Catatan &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/textViewNote"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="This is a sample note description."-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:lineSpacingExtra="4dp"-->
+<!--                android:layout_marginBottom="12dp" />-->
+
+<!--            &lt;!&ndash; Penulis &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/authorTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Penulis"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@android:color/darker_gray"-->
+<!--                android:layout_marginBottom="4dp" />-->
+
+<!--            &lt;!&ndash; Tanggal Catatan &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/textViewDate"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/date"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@android:color/darker_gray"-->
+<!--                android:layout_marginBottom="16dp" />-->
+
+<!--            &lt;!&ndash; Tombol Kembali &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:background="@drawable/gradient_blue_orange"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:elevation="4dp"-->
+<!--                android:clipToOutline="true">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/buttonBack"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Kembali"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:textColor="@android:color/white" />-->
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--</ScrollView>-->

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotesActivity">
+
+        <!-- Teks Add Notes di atas -->
+        <TextView
+            android:id="@+id/userNotesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/semua_catatan"
+            android:theme="@style/Theme.Recorder"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="13dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- EditText untuk input pencarian teks -->
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/cari_catatan"
+            android:padding="12dp"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="13dp"
+            app:layout_constraintTop_toBottomOf="@+id/userNotesTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:drawableLeft="@drawable/ic_note"
+            android:drawablePadding="10dp" />
+
+        <!-- EditText untuk input pencarian tanggal -->
+        <EditText
+            android:id="@+id/editTextSearchDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/pilih_tanggal"
+            android:padding="12dp"
+            android:background="@drawable/rounded_button"
+            android:layout_marginTop="13dp"
+            android:focusable="false"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/editTextSearch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/editTextSearch"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:drawablePadding="10dp" />
+
+    <!-- TextView untuk menampilkan pesan jika tidak ada catatan -->
+    <TextView
+        android:id="@+id/textViewNoNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catatan tidak ditemukan"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextSearchDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RecyclerView untuk menampilkan catatan -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAllNotes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewNoNotes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".NotesActivity">-->
+
+<!--    &lt;!&ndash; Teks Add Notes di atas &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/userNotesTitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/semua_catatan"-->
+<!--        android:theme="@style/Theme.Recorder"-->
+<!--        android:textSize="29sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--    &lt;!&ndash; EditText untuk input pencarian teks &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/editTextSearch"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="@string/cari_catatan"-->
+<!--        android:padding="12dp"-->
+<!--        android:background="@drawable/rounded_button"-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/userNotesTitle"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:drawableLeft="@drawable/ic_note"-->
+<!--        android:drawablePadding="10dp" />-->
+
+<!--    &lt;!&ndash; EditText untuk input pencarian tanggal &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/editTextSearchDate"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="@string/pilih_tanggal"-->
+<!--        android:padding="12dp"-->
+<!--        android:background="@drawable/rounded_button"-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:focusable="false"-->
+<!--        android:clickable="true"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/editTextSearch"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/editTextSearch"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:drawableLeft="@drawable/ic_calendar"-->
+<!--        android:drawablePadding="10dp" />-->
+
+<!--    &lt;!&ndash; TextView untuk menampilkan pesan jika tidak ada catatan &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/textViewNoNotes"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Catatan tidak ditemukan"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/editTextSearchDate"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--    &lt;!&ndash; RecyclerView untuk menampilkan catatan &ndash;&gt;-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerViewAllNotes"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/textViewNoNotes"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
